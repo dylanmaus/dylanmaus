@@ -1,18 +1,13 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Here is my [resume][resume].
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I am interested in programming, artificial intelligence, mathematics, and physics.
 
 
-[jekyll-organization]: https://github.com/jekyll
+
+[resume]: https://drive.google.com/file/d/1K-PfI6bhxc-NFT_1fUQD6XDOgW9V-HOn/view
