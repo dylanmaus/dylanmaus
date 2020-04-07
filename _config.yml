@@ -32,6 +32,9 @@ linkedin_username: dylan-maus
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-gist
+
+# permalink: /projects/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
