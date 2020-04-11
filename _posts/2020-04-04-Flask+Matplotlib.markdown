@@ -5,34 +5,51 @@ date:   2020-04-04
 permalink: /projects/Flask+Matplotlib
 categories: projects
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Display interactive matplotlib plots in a web browser with Flask.
 
-Jekyll requires blog post files to be named according to the following format:
 
-`YEAR-MONTH-DAY-title.MARKUP`
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight python %}
+@app.route("/")
+def index():
+    size = int(request.args.get("size", 400))
+    x_label = str(request.args.get("x_label", "xlabel"))
+    y_label = str(request.args.get("y_label", "ylabel"))
+    title = str(request.args.get("title", "title"))
+    plot_indices = str(request.args.get("plot_indices", "0 1 2"))
+    
+    return render_template('inputs.html', **locals())
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% highlight html %}
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Plotting tool</title>
+</head>
+<body>
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+	<form method="get" action="/">
+		<label for="x_label">x-axis label</label>
+		<input name="x_label", type=string, value="{{x_label}}" /> <br>
+		<label for="y_label">y-axis label</label>
+		<input name="y_label", type=string, value="{{y_label}}" /> <br>
+		<label for="title">title</label>
+		<input name="title", type=string, value="{{title}}" /> <br>
+		<label for="size">plot size</label>
+		<input name="size", type=int, value="{{size}}" /> <br>
+		<label for="plot_indices">select traces</label>
+		<input name="plot_indices", type=string, value="{{plot_indices}}" /> <br>
+
+		<input type=submit value="update plot">
+	</form>
+
+</body>
+<h3>Plot</h3>
+<img src="/{{size}}-{{x_label}}-{{y_label}}-{{plot_indices}}-{{title}}.svg"
+	alt="error"
+	height={{size}}
+>
+</html>
+{% endhighlight %}
