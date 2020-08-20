@@ -1,4 +1,7 @@
 # Welcome to Jekyll!
+# 
+# https://jekyllrb.com/docs/installation/macos/
+# /Users/human/.gem/ruby/2.7.0/bin
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -25,7 +28,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  dpmaus
+github_username:  dylanmaus
 linkedin_username: dylan-maus
 
 # Build settings
