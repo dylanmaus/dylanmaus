@@ -10,12 +10,12 @@ Graduate coursework at the Georgia Institute of Technology <br/>
 [<span style="color:green">CS 7642 Reinforcement Learning</span>][cs7642] <br/>
 [<span style="color:green">CS 7646 Machine Learning for Trading</span>][cs7646] <br/>
 [<span style="color:green">ISYE 6644 Simulation</span>][isye6644] <br/>
-[<span style="color:red">CS 6260 Applied Cryptography</span>][cs6260] <br/>
-[<span style="color:red">ISYE 6420 Bayesian Statistics</span>][isye6420] <br/>
-[<span style="color:lightgrey">CS 7638 Artificial Intelligence for Robotics</span>][cs7638] <br/>
+[<span style="color:green">CS 6260 Applied Cryptography</span>][cs6260] <br/>
+[<span style="color:green">ISYE 6420 Bayesian Statistics</span>][isye6420] <br/>
+[<span style="color:red">CS 7638 Artificial Intelligence for Robotics</span>][cs7638] <br/>
+[<span style="color:red">CS 7643 Deep Learning</span>][cs7643] <br/>
 [<span style="color:lightgrey">CS 6601 Artificial Intelligence</span>][cs6601] <br/>
-[<span style="color:lightgrey">CS 6515 Intro to Graduate Algorithms</span>][cs6515] <br/>
-[<span style="color:lightgrey">CS 7643 Deep Learning</span>][cs7643]
+[<span style="color:lightgrey">CS 6515 Intro to Graduate Algorithms</span>][cs6515]
 
 [cs7641]: https://www.omscs.gatech.edu/cs-7641-machine-learning
 [cs7642]: https://www.omscs.gatech.edu/cs-7642-reinforcement-learning
