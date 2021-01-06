@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flask + Matplotlib"
+title:  "Flask + Matplotlib (wip)"
 date:   2020-04-04
 permalink: /projects/Flask+Matplotlib
 categories: projects
