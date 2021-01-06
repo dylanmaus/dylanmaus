@@ -26,12 +26,12 @@ $ sudo apt-key add /var/cuda-repo-ubuntu2004-11-0-local/7fa2af80.pub
 $ sudo apt-get update
 $ sudo apt-get -y install cuda
 ```
-5. Download [<span style="color:blue">cuDNN</span>][cuDNN]
+5. Download [<span style="color:blue">cuDNN</span>][cuDNN]. You'll need to create an Nvidia account.
+Select the version compatible with CUDA-11.0
+<img src="/assets/cuda-screenshots/cuDNN-download.png" alt="drawing" width="800"/>
 
-
-
-
-
+Download the three packages for Ubuntu 20.04
+<img src="/assets/cuda-screenshots/cuDNN-download-selections.png" alt="drawing" width="800"/>
 
 
 
