@@ -6,4 +6,4 @@ permalink: /resume/
 
 Here is my [resume][resume].
 
-[resume]: https://drive.google.com/file/d/1K-PfI6bhxc-NFT_1fUQD6XDOgW9V-HOn/view
+[resume]: https://drive.google.com/file/d/1kIVu6PwPWGEuHNsGPeIdh2oNhHcXUoYh/view?usp=sharing
