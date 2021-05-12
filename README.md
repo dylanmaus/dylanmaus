@@ -1,4 +1,4 @@
 # dylanmaus
-bundle update
-bundle exec jekyll build
-bundle exec jekyll serve
+1. bundle update
+2. bundle exec jekyll build
+3. bundle exec jekyll serve
