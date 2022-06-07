@@ -6,7 +6,7 @@ permalink: /contact/
 
 Dylan Maus
 
-Mountain View, CA
+Ann Arbor, MI
 
 [Email][email]
 
