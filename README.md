@@ -1,4 +1,4 @@
 # dylanmaus
-  -- bundle update
-  -- bundle exec jekyll build
-  -- bundle exec jekyll serve
+  - bundle update
+  - bundle exec jekyll build
+  - bundle exec jekyll serve
