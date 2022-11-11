@@ -13,3 +13,4 @@ This article explains the math behind Deep Learning. Starting with basic data fi
 The simplest example is fitting a linear function to data. $$ f(x; m, b) = y = mx + b $$
 
 Testing $$ \LaTeX $$ $$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$
+<img src="/assets/plot.svg" alt="drawing" width="800"/>
