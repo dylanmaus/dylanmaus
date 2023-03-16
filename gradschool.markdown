@@ -27,4 +27,3 @@ Graduate coursework at the Georgia Institute of Technology <br/>
 [cs6601]: https://omscs.gatech.edu/cs-6601-artificial-intelligence
 [cs6515]: https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms
 [cs7643]: https://omscs.gatech.edu/cs-7643-deep-learning
-
