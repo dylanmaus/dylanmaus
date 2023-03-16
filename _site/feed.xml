@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-15T23:02:19-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="http://localhost:4000/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>http://localhost:4000/projects/Deep-Learning-Math</id><content type="html" xml:base="http://localhost:4000/projects/deep+learning+math"><![CDATA[<h1 id="introduction">Introduction</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-15T23:35:14-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="http://localhost:4000/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>http://localhost:4000/projects/Deep-Learning-Math</id><content type="html" xml:base="http://localhost:4000/projects/deep+learning+math"><![CDATA[<h1 id="introduction">Introduction</h1>
 
-<p>This article explains the math behind Deep Learning. Starting with basic data fitting and building up to artificial neural networks.</p>
+<p>This post explains some basic math behind Deep Learning. Starting with data fitting and building up to artificial neural networks.</p>
 
 <h1 id="data-fitting">Data Fitting</h1>
 
-<p>The simplest example is fitting a linear function to data. \(f(x; m, b) = y = mx + b\)</p>
+<p>The simplest example is fitting a linear function to data \(f(x; m, b) = y = mx + b\)</p>
 
-<p>Testing \(\LaTeX\) \(\nabla\_\boldsymbol{x} J(\boldsymbol{x})\)
+<p>Testing \(\LaTeX\) \(\nabla_{\boldsymbol{x}} J(\boldsymbol{x})\)
 <img src="/assets/plot.svg" alt="drawing" width="800" /></p>]]></content><author><name></name></author><category term="projects" /><summary type="html"><![CDATA[Introduction]]></summary></entry></feed>
