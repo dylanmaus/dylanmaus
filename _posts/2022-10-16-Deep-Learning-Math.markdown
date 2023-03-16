@@ -8,11 +8,11 @@ categories: projects
 
 # Introduction
 
-This article explains the math behind Deep Learning. Starting with basic data fitting and building up to artificial neural networks.
+This post explains some basic math behind Deep Learning. Starting with data fitting and building up to artificial neural networks.
 
 # Data Fitting
 
-The simplest example is fitting a linear function to data. $$ f(x; m, b) = y = mx + b $$
+The simplest example is fitting a linear function to data $$ f(x; m, b) = y = mx + b $$
 
-Testing $$ \LaTeX $$ $$ \nabla\_\boldsymbol{x} J(\boldsymbol{x}) $$
+Testing $$ \LaTeX $$ $$ \nabla\_{\boldsymbol{x}} J(\boldsymbol{x}) $$
 <img src="/assets/plot.svg" alt="drawing" width="800"/>
