@@ -6,5 +6,5 @@
 
 <p>The simplest example is fitting a linear function to data \(f(x; m, b) = y = mx + b\)</p>
 
-<p>Testing \(\LaTeX\) \(\nabla_{\boldsymbol{x}} J(\boldsymbol{x})\)
+<p>Testing \(\LaTeX\) \(\nabla\_{\boldsymbol{x}} J(\boldsymbol{x})\)
 <img src="/assets/plot.svg" alt="drawing" width="800" /></p>]]></content><author><name></name></author><category term="projects" /><summary type="html"><![CDATA[Introduction]]></summary></entry></feed>
