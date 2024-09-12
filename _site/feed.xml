@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-11T01:07:03-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="http://localhost:4000/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>http://localhost:4000/projects/Deep-Learning-Math</id><content type="html" xml:base="http://localhost:4000/projects/deep+learning+math"><![CDATA[<p>Consider the function \(z(x, y) = a \sin(x) + b \cos(y)\) and noisy data from sensors that measure \(z\) at many \((x, y)\) locations.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-09-11T23:50:13-04:00</updated><id>/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>/projects/Deep-Learning-Math</id><content type="html" xml:base="/projects/deep+learning+math"><![CDATA[<p>Consider the function \(z(x, y) = a \sin(x) + b \cos(y)\) and noisy data from sensors that measure \(z\) at many \((x, y)\) locations.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><img src="/assets/plot.svg" alt="" /></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">\(z(x, y) = a \sin(x) + b \cos(y)\)</td>
-    </tr>
-  </tbody>
-</table>
+<!-- | ![](/assets/plot.svg) | 
+|:--:|
+| $$ z(x, y) = a \sin(x) + b \cos(y) $$ |
+
+<img src="/assets/plot.svg" alt="drawing" width="800"/> -->
 
 <p>Our goal is to fit the data to \(z(x, y)\) and find the parameters \(a\) and \(b\). A non-linear least squares approach such as the Gauss-Newton algorithm could be used to solve this problem.</p>
 
