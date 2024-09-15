@@ -13,8 +13,8 @@ In a real world scenario we may not even know the function $$ z $$, so it must b
 
 This post attempts to explain some of the math behind Deep Learning and why it may be preferred to other mathematical approaches.
 
-## Deep Learning
-# Function Approximation
+## Deep learning
+# Function approximation
 To approximate the unknown function $$ z $$, consider a 2 layer fully connected neural network with 2 inputs, 3 nodes in the hidden layer, 1 output, and sigmoid activation function. The complete breakdown of the neural network $$ f $$ is shown below.
 
 $$ f(\mathbf{x}) = \sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) $$
@@ -70,14 +70,23 @@ We will use Mean squared error as our loss function.
 
 $$ L = \frac{1}{N} \sum_{i=0}^N (f(\mathbf{x}_i) - y_i)^2 $$
 
-The objective of training the neural network is to minimize $$ L $$. $$ N $$ is the equal to the batch size, so $$ L $$ will have $$ N $$ terms.
+The objective of training the neural network is to minimize $$ L $$. $$ N $$ is equal to the batch size, so $$ L $$ will have $$ N $$ terms.
+
+## Gradient descent
+
+$$ \nabla L = \begin{bmatrix}
+\frac{\partial L}{\partial \mathbf{W}_0} \\
+\frac{\partial L}{\partial \mathbf{W}_1} \\
+\frac{\partial L}{\partial \mathbf{B}_0} \\
+\frac{\partial L}{\partial \mathbf{B}_1} \\
+\end{bmatrix} $$
 
 <!-- | ![](/assets/plot.svg) | 
 |:--:|
 | $$ z(x, y) = a \sin(x) + b \cos(y) $$ |
 
 <img src="/assets/plot.svg" alt="drawing" width="800"/> -->
-# Data Fitting
+# Data fitting
 
 The simplest example is fitting a linear function to data $$ f(x; m, b) = y = mx + b $$
 
