@@ -74,6 +74,8 @@ The objective of training the neural network is to minimize $$ L $$. $$ N $$ is 
 
 ## Gradient descent
 
+The gradient is the derivative generalized to multiple dimensions that finds the direction of steepest ascent. This is applicable in maximization problems. However, minimization problems require finding the direction of steepest descent. So the negative gradient is computed. 
+
 $$ \nabla L = \begin{bmatrix}
 \frac{\partial L}{\partial \mathbf{W}_0} \\
 \frac{\partial L}{\partial \mathbf{W}_1} \\
