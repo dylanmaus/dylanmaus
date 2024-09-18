@@ -9,17 +9,17 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Introduction Consider the function \(z(x, y) = a \sin(x) + b \cos(y)\) and noisy data from sensors that measure \(z\) at many \((x, y)\) locations. Our goal is to fit the data to \(z(x, y)\) and find the parameters \(a\) and \(b\). A nonlinear least squares approach such as the Gauss-Newton algorithm could be used to solve this nonlinear regression problem." />
 <meta property="og:description" content="Introduction Consider the function \(z(x, y) = a \sin(x) + b \cos(y)\) and noisy data from sensors that measure \(z\) at many \((x, y)\) locations. Our goal is to fit the data to \(z(x, y)\) and find the parameters \(a\) and \(b\). A nonlinear least squares approach such as the Gauss-Newton algorithm could be used to solve this nonlinear regression problem." />
-<link rel="canonical" href="http://localhost:4000/projects/deep+learning+math" />
-<meta property="og:url" content="http://localhost:4000/projects/deep+learning+math" />
+<link rel="canonical" href="/projects/deep+learning+math" />
+<meta property="og:url" content="/projects/deep+learning+math" />
 <meta property="og:site_name" content="Dylan Maus" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-10-16T00:00:00-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Deep Learning Math" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-16T00:00:00-04:00","datePublished":"2022-10-16T00:00:00-04:00","description":"Introduction Consider the function \\(z(x, y) = a \\sin(x) + b \\cos(y)\\) and noisy data from sensors that measure \\(z\\) at many \\((x, y)\\) locations. Our goal is to fit the data to \\(z(x, y)\\) and find the parameters \\(a\\) and \\(b\\). A nonlinear least squares approach such as the Gauss-Newton algorithm could be used to solve this nonlinear regression problem.","headline":"Deep Learning Math","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/deep+learning+math"},"url":"http://localhost:4000/projects/deep+learning+math"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-16T00:00:00-04:00","datePublished":"2022-10-16T00:00:00-04:00","description":"Introduction Consider the function \\(z(x, y) = a \\sin(x) + b \\cos(y)\\) and noisy data from sensors that measure \\(z\\) at many \\((x, y)\\) locations. Our goal is to fit the data to \\(z(x, y)\\) and find the parameters \\(a\\) and \\(b\\). A nonlinear least squares approach such as the Gauss-Newton algorithm could be used to solve this nonlinear regression problem.","headline":"Deep Learning Math","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/deep+learning+math"},"url":"/projects/deep+learning+math"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dylan Maus" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Dylan Maus" /></head>
 <body><header class="site-header">
   <div class="wrapper"><a class="site-title" rel="author" href="/">
       Dylan Maus
@@ -119,14 +119,22 @@ b_3
 \sigma(\omega_4 x_0 + \omega_5 x_1 + b_2)\omega_8 +
 b_3)\]
 
-<h2 id="loss">Loss</h2>
+<h1 id="activation-function">Activation function</h1>
+
+<p>Sigmoid</p>
+
+\[\sigma = \frac{1}{1 + e^{-x}}\]
+
+\[\frac{d\sigma}{dx} = \frac{e^{-x}}{(1 + e^{-x})^2}\]
+
+<h1 id="loss">Loss</h1>
 <p>We will use Mean squared error as our loss function.</p>
 
 \[L = \frac{1}{N} \sum_{i=0}^N (f(\mathbf{x}_i) - y_i)^2\]
 
-<p>The objective of training the neural network is to minimize \(L\). \(N\) is equal to the batch size, so \(L\) will have \(N\) terms.</p>
+<p>The objective of training the neural network is to minimize \(L\). During training, \(N\) is equal to the batch size.</p>
 
-<h2 id="gradient-descent">Gradient descent</h2>
+<h1 id="gradient-descent">Gradient descent</h1>
 
 <p>The gradient is the derivative generalized to multiple dimensions that finds the direction of steepest ascent. This is applicable in maximization problems. However, minimization problems require finding the direction of steepest descent. So the negative gradient is computed.</p>
 
@@ -137,16 +145,34 @@ b_3)\]
 \frac{\partial L}{\partial \mathbf{B}_1} \\
 \end{bmatrix}\]
 
+\[\frac{\partial L}{\partial \mathbf{W}_0} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
+\mathbf{W}_1 \mathbf{x}\]
+
+\[\frac{\partial L}{\partial \mathbf{b}_0} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\]
+
+\[\frac{\partial L}{\partial \mathbf{W}_1} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
+\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\]
+
+\[\frac{\partial L}{\partial \mathbf{b}_1} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})\]
+
+<!-- \frac{d\sigma}{dW_0} -->
+
 <!-- | ![](/assets/plot.svg) | 
 |:--:|
 | $$ z(x, y) = a \sin(x) + b \cos(y) $$ |
 
 <img src="/assets/plot.svg" alt="drawing" width="800"/> -->
-<h1 id="data-fitting">Data fitting</h1>
-
-<p>The simplest example is fitting a linear function to data \(f(x; m, b) = y = mx + b\)</p>
-
-<p>Testing \(\LaTeX\) \(\nabla_{\boldsymbol{x}} J(\boldsymbol{x})\)</p>
+<p>\(\LaTeX\)</p>
 </div><a class="u-url" href="/projects/deep+learning+math" hidden></a>
 </article>
 

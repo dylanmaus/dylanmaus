@@ -65,14 +65,22 @@ $$ f(\mathbf{x}) = \sigma(
 \sigma(\omega_4 x_0 + \omega_5 x_1 + b_2)\omega_8 +
 b_3) $$
 
-## Loss
+# Activation function
+
+Sigmoid
+
+$$ \sigma = \frac{1}{1 + e^{-x}} $$
+
+$$ \frac{d\sigma}{dx} = \frac{e^{-x}}{(1 + e^{-x})^2} $$
+
+# Loss
 We will use Mean squared error as our loss function.
 
 $$ L = \frac{1}{N} \sum_{i=0}^N (f(\mathbf{x}_i) - y_i)^2 $$
 
-The objective of training the neural network is to minimize $$ L $$. $$ N $$ is equal to the batch size, so $$ L $$ will have $$ N $$ terms.
+The objective of training the neural network is to minimize $$ L $$. During training, $$ N $$ is equal to the batch size.
 
-## Gradient descent
+# Gradient descent
 
 The gradient is the derivative generalized to multiple dimensions that finds the direction of steepest ascent. This is applicable in maximization problems. However, minimization problems require finding the direction of steepest descent. So the negative gradient is computed. 
 
@@ -83,13 +91,31 @@ $$ \nabla L = \begin{bmatrix}
 \frac{\partial L}{\partial \mathbf{B}_1} \\
 \end{bmatrix} $$
 
+$$ \frac{\partial L}{\partial \mathbf{W}_0} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
+\mathbf{W}_1 \mathbf{x} $$
+
+$$ \frac{\partial L}{\partial \mathbf{b}_0} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0) $$
+
+$$ \frac{\partial L}{\partial \mathbf{W}_1} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
+\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0) $$
+
+$$ \frac{\partial L}{\partial \mathbf{b}_1} =
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y}) $$
+
+<!-- \frac{d\sigma}{dW_0} -->
+
 <!-- | ![](/assets/plot.svg) | 
 |:--:|
 | $$ z(x, y) = a \sin(x) + b \cos(y) $$ |
 
 <img src="/assets/plot.svg" alt="drawing" width="800"/> -->
-# Data fitting
-
-The simplest example is fitting a linear function to data $$ f(x; m, b) = y = mx + b $$
-
-Testing $$ \LaTeX $$ $$ \nabla_{\boldsymbol{x}} J(\boldsymbol{x}) $$
+$$ \LaTeX $$
