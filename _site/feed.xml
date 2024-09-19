@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-09-18T00:32:13-04:00</updated><id>/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>/projects/Deep-Learning-Math</id><content type="html" xml:base="/projects/deep+learning+math"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-19T00:59:35-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="http://localhost:4000/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>http://localhost:4000/projects/Deep-Learning-Math</id><content type="html" xml:base="http://localhost:4000/projects/deep+learning+math"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Consider the function \(z(x, y) = a \sin(x) + b \cos(y)\) and noisy data from sensors that measure \(z\) at many \((x, y)\) locations. Our goal is to fit the data to \(z(x, y)\) and find the parameters \(a\) and \(b\). A nonlinear least squares approach such as the Gauss-Newton algorithm could be used to solve this nonlinear regression problem.</p>
 
 <p>In a real world scenario we may not even know the function \(z\), so it must be approximated. To solve this more advanced problem, we propose a model i.e. an artificial neural network to approximate \(z\). The parameters of this model must be iteratively tuned to fit the data.</p>
@@ -69,6 +69,30 @@ b_3)\]
 
 \[L = \frac{1}{N} \sum_{i=0}^N (f(\mathbf{x}_i) - y_i)^2\]
 
+\[L = \frac{1}{N} \mathbf{1}^T \begin{bmatrix}
+(f(\mathbf{x}_0) - y_0)^2 \\
+\vdots \\
+(f(\mathbf{x}_N) - y_N)^2
+\end{bmatrix}\]
+
+\[\mathbf{X} = \begin{bmatrix}
+\mathbf{x}_0 \\
+\vdots \\
+\mathbf{x}_N
+\end{bmatrix} = \begin{bmatrix}
+x_0^0 &amp; x_1^0 \\
+\vdots &amp; \vdots \\
+x_0^N &amp; x_1^N
+\end{bmatrix}\]
+
+\[\mathbf{Y} = \begin{bmatrix}
+y_0 \\
+\vdots \\
+y_N
+\end{bmatrix}\]
+
+\[L = \frac{1}{N} \mathbf{1}^T (f(\mathbf{X}) - \mathbf{Y})^2\]
+
 <p>The objective of training the neural network is to minimize \(L\). During training, \(N\) is equal to the batch size.</p>
 
 <h1 id="gradient-descent">Gradient descent</h1>
@@ -83,24 +107,24 @@ b_3)\]
 \end{bmatrix}\]
 
 \[\frac{\partial L}{\partial \mathbf{W}_0} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
-d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
-d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
-\mathbf{W}_1 \mathbf{x}\]
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)
+\mathbf{W}_1 \mathbf{X}\]
 
 \[\frac{\partial L}{\partial \mathbf{b}_0} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
-d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
-d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\]
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\]
 
 \[\frac{\partial L}{\partial \mathbf{W}_1} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
-d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
-d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
-\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\]
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)
+\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\]
 
 \[\frac{\partial L}{\partial \mathbf{b}_1} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})\]
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})\]
 
 <!-- \frac{d\sigma}{dW_0} -->
 

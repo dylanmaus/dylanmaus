@@ -78,6 +78,31 @@ We will use Mean squared error as our loss function.
 
 $$ L = \frac{1}{N} \sum_{i=0}^N (f(\mathbf{x}_i) - y_i)^2 $$
 
+$$ L = \frac{1}{N} \mathbf{1}^T \begin{bmatrix}
+(f(\mathbf{x}_0) - y_0)^2 \\
+\vdots \\
+(f(\mathbf{x}_N) - y_N)^2
+\end{bmatrix} $$
+
+$$ \mathbf{X} = \begin{bmatrix}
+\mathbf{x}_0 \\
+\vdots \\
+\mathbf{x}_N
+\end{bmatrix} = \begin{bmatrix}
+x_0^0 & x_1^0 \\
+\vdots & \vdots \\
+x_0^N & x_1^N
+\end{bmatrix}
+$$
+
+$$ \mathbf{Y} = \begin{bmatrix}
+y_0 \\
+\vdots \\
+y_N
+\end{bmatrix} $$
+
+$$ L = \frac{1}{N} \mathbf{1}^T (f(\mathbf{X}) - \mathbf{Y})^2 $$
+
 The objective of training the neural network is to minimize $$ L $$. During training, $$ N $$ is equal to the batch size.
 
 # Gradient descent
@@ -92,24 +117,24 @@ $$ \nabla L = \begin{bmatrix}
 \end{bmatrix} $$
 
 $$ \frac{\partial L}{\partial \mathbf{W}_0} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
-d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
-d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
-\mathbf{W}_1 \mathbf{x} $$
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)
+\mathbf{W}_1 \mathbf{X} $$
 
 $$ \frac{\partial L}{\partial \mathbf{b}_0} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
-d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
-d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0) $$
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0) $$
 
 $$ \frac{\partial L}{\partial \mathbf{W}_1} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
-d\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
-d\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)
-\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0) $$
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y})
+d\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1)
+d\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)
+\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0) $$
 
 $$ \frac{\partial L}{\partial \mathbf{b}_1} =
-\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y}) $$
+\frac{2}{N} (\sigma(\sigma(\mathbf{W}_0\mathbf{X} + \mathbf{b}_0)\mathbf{W}_1 + \mathbf{b}_1) - \mathbf{y}) $$
 
 <!-- \frac{d\sigma}{dW_0} -->
 
