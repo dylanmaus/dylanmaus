@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-21T00:37:23-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="http://localhost:4000/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>http://localhost:4000/projects/Deep-Learning-Math</id><content type="html" xml:base="http://localhost:4000/projects/deep+learning+math"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-21T14:44:29-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dylan Maus</title><subtitle>Software Engineer</subtitle><entry><title type="html">Deep Learning Math</title><link href="http://localhost:4000/projects/deep+learning+math" rel="alternate" type="text/html" title="Deep Learning Math" /><published>2022-10-16T00:00:00-04:00</published><updated>2022-10-16T00:00:00-04:00</updated><id>http://localhost:4000/projects/Deep-Learning-Math</id><content type="html" xml:base="http://localhost:4000/projects/deep+learning+math"><![CDATA[<h2 id="introduction">Introduction</h2>
 <p>Consider the function \(z(x, y) = a \sin(x) + b \cos(y)\) and noisy data from sensors that measure \(z\) at many \((x, y)\) locations. Our goal is to fit the data with \(z(x, y)\) by finding the parameters \(a\) and \(b\). A nonlinear least squares approach such as the Gauss-Newton algorithm could be used to solve this nonlinear regression problem.</p>
 
 <p>In a real world scenario we may not even know the function \(z\) at all. It may be high dimensional and impossible to guess, so it must be approximated. To solve this more advanced problem, we propose a model such as an artificial neural network to approximate \(z\). Our goal here is similar, iteratively tune the model parameters to fit the data.</p>
@@ -15,9 +15,9 @@ x_1
 \end{bmatrix}\]
 
 \[\mathbf{W}_0 = \begin{bmatrix} 
-\omega_0&amp; \omega_1 \\
-\omega_2&amp; \omega_3 \\
-\omega_4&amp; \omega_5
+\omega_0 \omega_1 \\
+\omega_2 \omega_3 \\
+\omega_4 \omega_5
 \end{bmatrix}\]
 
 \[\mathbf{b}_0 = \begin{bmatrix} 
@@ -40,9 +40,9 @@ b_3
 
 \[f(\mathbf{x}) = \sigma\left(\sigma\left(
 \begin{bmatrix} 
-\omega_0&amp; \omega_1 \\
-\omega_2&amp; \omega_3 \\
-\omega_4&amp; \omega_5
+\omega_0 \omega_1 \\
+\omega_2 \omega_3 \\
+\omega_4 \omega_5
 \end{bmatrix}
 \begin{bmatrix} 
 x_0 \\
