@@ -20,10 +20,10 @@ Graduate coursework at the Georgia Institute of Technology <br/>
 [cs7641]: https://www.omscs.gatech.edu/cs-7641-machine-learning
 [cs7642]: https://www.omscs.gatech.edu/cs-7642-reinforcement-learning
 [cs7646]: https://www.omscs.gatech.edu/cs-7646-machine-learning-trading
-[isye6644]: https://www2.isye.gatech.edu/~sman/courses/6644/
-[cs6260]: https://www.cc.gatech.edu/~aboldyre/teaching/F11cs6260/
+[isye6644]: https://omscs.gatech.edu/isye-6644-simulation-and-modeling-engineering-and-science
+[cs6260]: https://omscs.gatech.edu/cs-6260-applied-cryptography
 [isye6420]: https://www.omscs.gatech.edu/isye-6420-bayesian-statistics
-[cs7638]: https://omscs.gatech.edu/cs-7638-artificial-intelligence-robotics
+[cs7638]: https://omscs.gatech.edu/cs-7638-robotics-ai-techniques
 [cs6601]: https://omscs.gatech.edu/cs-6601-artificial-intelligence
 [cs6515]: https://omscs.gatech.edu/cs-6515-intro-graduate-algorithms
 [cs7643]: https://omscs.gatech.edu/cs-7643-deep-learning
