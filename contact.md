@@ -4,10 +4,6 @@ title: Contact
 permalink: /contact/
 ---
 
-Dylan Maus
-
-Ann Arbor, MI
-
 [Email][email]
 
 [Website][website]
