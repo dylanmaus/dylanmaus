@@ -36,7 +36,12 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
-# permalink: /projects/
+permalink: /posts/:title
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

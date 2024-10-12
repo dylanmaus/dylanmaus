@@ -308,4 +308,6 @@ blockquote { color: #e1e1e1; border-left: 4px solid #e8e8e8; padding-left: 15px;
 /** Page content */
 .post-meta { font-size: 14px; color: #e1e1e1; }
 
+.no-bullets, .no-bullets li { list-style-type: none; font-size: 26px; }
+
 /*# sourceMappingURL=main.css.map */

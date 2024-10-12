@@ -1,9 +1,6 @@
 ---
-layout: post
-title: "Deep Learning Math"
-date: 2022-10-16
-permalink: /projects/deep+learning+math
-categories: projects
+layout: project
+name: "Deep Learning Math"
 ---
 
 ## Introduction
@@ -23,9 +20,9 @@ x_1
 \end{bmatrix} $$
 
 $$ \mathbf{W}_0 = \begin{bmatrix} 
-\omega_0 \omega_1 \\
-\omega_2 \omega_3 \\
-\omega_4 \omega_5
+\omega_0& \omega_1 \\
+\omega_2& \omega_3 \\
+\omega_4& \omega_5
 \end{bmatrix} $$
 
 $$ \mathbf{b}_0 = \begin{bmatrix} 
@@ -48,9 +45,9 @@ $$ f(\mathbf{x}) = \sigma(\sigma(\mathbf{W}_0\mathbf{x} + \mathbf{b}_0)\mathbf{W
 
 $$ f(\mathbf{x}) = \sigma\left(\sigma\left(
 \begin{bmatrix} 
-\omega_0 \omega_1 \\
-\omega_2 \omega_3 \\
-\omega_4 \omega_5
+\omega_0& \omega_1 \\
+\omega_2& \omega_3 \\
+\omega_4& \omega_5
 \end{bmatrix}
 \begin{bmatrix} 
 x_0 \\
