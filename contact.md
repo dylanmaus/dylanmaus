@@ -9,4 +9,4 @@ permalink: /contact/
 [Website][website]
 
 [website]: https://dylanmaus.com
-[email]: mailto:dylan.p.maus@gmail.com
+[email]: mailto:xyz@gmail.com
