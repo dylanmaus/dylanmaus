@@ -36,13 +36,13 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
-permalink: /posts/:title.html
+permalink: /posts/index.html
 # permalink: /posts/:title
 
 collections:
   projects:
     output: true
-    permalink: /:collection/:path/:title.html
+    permalink: /:collection/:path/index.html
     # permalink: /:collection/:path/
 
 # Exclude from processing.
