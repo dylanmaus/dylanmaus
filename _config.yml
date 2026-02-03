@@ -36,12 +36,14 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
-permalink: /posts/:title
+permalink: /posts/:title.html
+# permalink: /posts/:title
 
 collections:
   projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:collection/:path/:title.html
+    # permalink: /:collection/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -51,7 +53,9 @@ collections:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - tf/
+  - README.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
