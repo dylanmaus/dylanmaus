@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket       = "group7727-tfstate"
-    key          = "dylanmaus/terraform.tfstate"
+    key          = "dylanmaus_com_infra/terraform.tfstate"
     region       = "us-east-2"
     encrypt      = true
     use_lockfile = true

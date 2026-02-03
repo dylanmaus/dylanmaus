@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Grad School
-permalink: /gradschool/
+permalink: /gradschool/index.html
 ---
 
 Graduate coursework at the Georgia Institute of Technology <br/>

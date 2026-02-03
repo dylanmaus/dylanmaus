@@ -1,6 +1,6 @@
 # A record for the root domain (e.g., example.com)
 resource "aws_route53_record" "root_a" {
-  zone_id = data.aws_route53_zone.primary.zone_id
+  zone_id = data.aws_route53_zone.aws_route53_zone.zone_id
   name    = var.domain_name
   type    = "A"
 
@@ -13,7 +13,7 @@ resource "aws_route53_record" "root_a" {
 
 # A record for the www subdomain (e.g., www.example.com)
 resource "aws_route53_record" "www_a" {
-  zone_id = data.aws_route53_zone.primary.zone_id
+  zone_id = data.aws_route53_zone.aws_route53_zone.zone_id
   name    = "www.${var.domain_name}"
   type    = "A"
 

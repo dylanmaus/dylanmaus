@@ -1,6 +1,6 @@
 resource "aws_cloudfront_origin_access_control" "default" {
   name                              = "OAC for ${aws_s3_bucket.website_bucket.bucket}"
-  origin_access_control_origin_type = "S3"
+  origin_access_control_origin_type = "s3"
   signing_behavior                  = "no-override"
   signing_protocol                  = "sigv4"
 }
@@ -74,4 +74,6 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2021"
   }
+
+  depends_on = [aws_acm_certificate.cert, aws_acm_certificate_validation.cert_validation]
 }

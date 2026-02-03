@@ -4,7 +4,7 @@ variable "group" {
 
 variable "aws_region" {
   type    = string
-  default = "us-east-2"
+  default = "us-east-1"
 }
 
 variable "tags" {
@@ -13,11 +13,10 @@ variable "tags" {
 
 variable "domain_name" {
   description = "the root domain name"
-  type = string
+  type        = string
 }
 
-variable "site_directory" {
-  description = "path to static file"
-  type = string
-  default = "./static"
+variable "bucket_name" {
+  description = "s3 bucket name"
+  type        = string
 }
