@@ -6,7 +6,4 @@ permalink: /contact/index.html
 
 [Email][email]
 
-[Website][website]
-
-[website]: https://dylanmaus.com
-[email]: mailto:xyz@gmail.com
+[email]: mailto:dylan.p.maus@gmail.com
