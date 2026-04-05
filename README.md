@@ -16,3 +16,9 @@ bundle install
 ```
 
 # Infrastructure
+S3 and CloudFront
+
+```
+aws s3 sync _site/ s3://<BUCKET>/ --delete
+aws cloudfront create-invalidation --distribution-id <DISTRIBUTION_ID> --paths "/*"
+```
